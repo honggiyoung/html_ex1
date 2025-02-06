@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block; /*inline-block 한줄 다 차지 inline 특징과 block특징을 동시에 가짐*/
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid black ;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin-right : 5px;
+        }
+
+        .box2 {
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin-top: 5px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid black ; /*border 사용시 한번에 변경이 가능함*/
+        }
+        
+        .box3 {
+            display: block;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin-top: 5px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 2px solid black ; /*border 사용시 한번에 변경이 가능함*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        box1
+    </div>
+    <div class="box2"> <!--span은 div처럼 영역을 다 차지하지 않고 글자 수 만큼만 영역을 가짐-->
+        box2
+    </div>
+    <div class="box3"> <!-- display - inline임-->
+        test
+    </div>
+</body>
+</html>
