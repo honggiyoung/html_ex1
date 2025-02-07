@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+          
+          background-color: #eee;
+          display: flex;
+          justify-content: row; /*왼쪽에서 오르쪾으로 정렬함*/
+      }
+      .box{
+          width: 70px;
+          padding: 10px 40px;
+          margin: 5px;
+          text-align: center;
+          background-color: aqua;
+      }
+      .contents{
+        justify-content: center;
+      }
+      .contents2{
+        justify-content: space-around; /*균일간격*/
+      }
+    
+      .contents3{
+        justify-content: space-between;
+      } /*처음과 끝 부분에*/
+    
+      .contents4{
+        justify-content: space-evenly;
+      }
+    </style>
+</head>
+<body>
+    <div id="container" class="contents4">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+</body>
+</html>

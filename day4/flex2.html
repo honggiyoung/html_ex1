@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+          
+            background-color: #eee;
+            display: flex;
+            justify-content: row; /*왼쪽에서 오르쪾으로 정렬함*/
+        }
+        .box{
+            width: 70px;
+            padding: 10px 40px;
+            margin: 5px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .wrap{
+            flex-wrap: nowrap; /* flex안에 있는 요소들을 한줄에 표시함*/
+        }
+        .wrap2{
+            flex-wrap: wrap; /* flex안에 있는 요소들을 여러줄에 표시함*/
+        }
+    </style>
+</head>
+<body>
+        <div id="container" class="wrap2">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+            <div class="box">box7</div>
+            <div class="box">box8</div>
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+            <div class="box">box7</div>
+            <div class="box">box8</div>
+        </div>
+</body>
+</html>
