@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            width: 300px;
+            height: 300px;
+            background-image: url("../day2/media/img1.jpg");
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-image: url("../day2/media/img2.jpg");
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;">
+        <img id="img" onclick="fnImage()">
+    </a>
+    
+    <!-- <button><div onclick="click();"></div></button> -->
+    
+</body>
+</html>
+<script>
+    function fnImage() {
+        let img = document.querySelector("img");
+        img.src = "../day2/media/img2.jpg";
+
+    }
+</script>
