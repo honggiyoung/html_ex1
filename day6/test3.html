@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="subject" value="java" img src="../day2/media/img1.jpg">자바
+    <input type="radio" name="subject" value="oracle">오라클
+    <input type="radio" name="subject" value="html">html/css/javascript
+    <input type="radio" name="subject" value="jquery">jquery
+    <button onclick="fnSubject()">선택</button>
+    <div>
+        <img width="300px" height="300px" src="" style="display: none;" alt="이미지">
+    </div>
+</body>
+</html>
+<script>
+    function fnSubject() {
+        
+        let subject = document.querySelector("input[name='subject']:checked").value;
+        let img = document.querySelector("img");
+        
+        img.style.display = "inline"; //이미지가 보이게함
+        img.src = "image/" + subject + ".jpg";
+
+        if(subject == "java") {
+           alert("자바");
+            img.src="../day2/media/img1.jpg";
+            subject.appendChild(img);
+        } else if(subject == "oracle") 
+        {
+            img.src="../day2/media/img2.jpg";
+        }
+        else if(subject == "html") 
+        {
+            img.src="../day2/media/img3.jpg";
+        }
+        else if(subject == "jquery") 
+        {
+            img.src="../day2/media/img4.jpg";
+        }
+        
+    }
+</script>

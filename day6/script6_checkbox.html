@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="subject" value="java" img src="../day2/media/img1.jpg">자바
+    <input type="checkbox" name="subject" value="oracle">오라클
+    <input type="checkbox" name="subject" value="html">html/css/javascript
+    <input type="checkbox" name="subject" value="jquery">jquery
+    <button onclick="fnSubject()">선택</button>
+</body>
+</html>
+<script>
+    function fnSubject() {
+        let subject = document.querySelectorAll("input[name='subject']:checked"); //가져와야 할 값이 2개이상이면 all해야함
+        console.log(subject);
+
+        for(let i=0; i<subject.length; i++) {
+            console.log(subject[i].value);
+        }
+    }
+</script>
