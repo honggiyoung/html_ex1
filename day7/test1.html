@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1><div>메모장</div></h1>
+    <input id="text"> 
+    <button onclick="fninsert()">추가</button>
+    <hr>
+    <div id="contents" onclick="fnremove()">
+
+    </div>
+</body>
+</html>
+<script>
+    function fninsert() {
+        let text = document.querySelector("#text").value;
+        let contents = document.querySelector("#contents");
+
+        let node = document.createElement("li");
+        node.innerHTML=text;
+        contents.appendChild(node);
+        document.querySelector("#text").value = ""; //추가하고 공백으로 둠
+
+        node.onclick = function(e) {
+            list.removeChild(e.target);
+        }
+    }
+
+    function fnremove() {
+        let a = false;
+        let text = document.querySelector("#text").value;
+        let contents = document.querySelector("#contents");
+        alert("삭제하시겠습니가?");
+
+        contents.removeAttribute("li");
+
+        list.removeChild(node);
+    }
+</script>
