@@ -9,7 +9,15 @@
 </head>
 <body>
     <div id="app">
-        
+        <div>
+            아이디 :  <input v-model="userId" @keyup.enter="loginbtn">
+        </div>
+        <div>
+            비밀번호 :  <input type="password" v-model="userpw">
+        </div>
+        <div>
+            <button @click="loginbtn" @keyup.enter="loginbtn">로그인</button>
+        </div>
     </div>
 </body>
 </html>
@@ -19,21 +27,22 @@
         data() {
             return {
                 // 변수
+                userId : "",
+                userpw : ""
             };
         },
         methods: {
             // 함수(메소드)
-            fnSample: function () {
-                $.ajax({
-                    url: "",
-                    dataType: "json",
-                    type: "GET",
-                    data: {},
-                    success: function (data) {
+            loginbtn: function () {
+                let self = this;
 
-                    }
-                });
+                if(self.userId == "test123" && self.userpw == "1234#A") {
+                    location.href = "main.html";
+                } else {
+                    alert("아이디/패스워드 확인")
+                }
             }
+            
         },
         mounted() {
             // 처음 시작할 때 실행되는 부분
